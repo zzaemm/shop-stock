@@ -1,0 +1,14 @@
+{
+  "name": "shop-stock",
+  "version": "1.0.0",
+  "description": "Offline-first stock logger for small shopkeepers. Installable phone web app, no sign-up.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\"",
+    "serve": "node tests/serve.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}
