@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ShopStock</title>
+  <meta name="description" content="Simple stock log for small shops. Works offline on your phone. No sign-up.">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="app-title">ShopStock</h1>
+    <button id="btn-settings" class="icon-btn" aria-label="Settings">&#9881;</button>
+  </header>
+
+  <div id="summary" class="summary" aria-live="polite"></div>
+
+  <nav id="tabs" role="tablist">
+    <button role="tab" data-tab="stock" data-i18n="tab_stock"></button>
+    <button role="tab" data-tab="low" data-i18n="tab_low"></button>
+    <button role="tab" data-tab="history" data-i18n="tab_history"></button>
+  </nav>
+
+  <div id="searchwrap"><input id="search" type="search" autocomplete="off" data-i18n-placeholder="search"></div>
+
+  <main id="list"></main>
+
+  <form id="quick" autocomplete="off">
+    <input id="quick-input" type="text" enterkeyhint="done" data-i18n-placeholder="quick_placeholder">
+    <button type="submit" data-i18n="go"></button>
+  </form>
+
+  <button id="fab" aria-label="Add item">+</button>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-backdrop" id="sheet-backdrop"></div>
+    <div class="sheet-body" id="sheet-body" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
